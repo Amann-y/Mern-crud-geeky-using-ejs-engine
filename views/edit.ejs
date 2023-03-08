@@ -1,0 +1,31 @@
+<%- include('./partials/header.ejs')%>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 mx-auto mt-5">
+            <h2 class="alert alert-success text-center">Update Student</h2>
+            <form method="post" action="/student/update/<%= data._id%>">
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Name</label>
+                  <input type="text" class="form-control" id="name" aria-describedby="emailHelp" name="name" value="<%= data.name %>"/>
+                
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Age</label>
+                  <input type="text" class="form-control" id="age" name="age" value="<%= data.age %>">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Fees</label>
+                    <input type="text" class="form-control" id="fees" name="fees" value="<%= data.fees %>">
+                </div>
+               
+                <button type="submit" class="btn btn-primary">Update</button>
+                <button type="submit" class="btn btn-secondary">Back To Home</button>
+              </form>
+        </div>
+    
+    </div>
+</div>
+
+
+<%- include('./partials/footer.ejs')%>
